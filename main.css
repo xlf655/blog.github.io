@@ -11,7 +11,7 @@ a,body {
 .side-bar {
   float: left;
   width: 20%;
-  position: fixed;
+
   margin-top:30px;
 }
 .side-bar>* {
