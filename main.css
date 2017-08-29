@@ -12,6 +12,7 @@ a,body {
   float: left;
   width: 20%;
   position: fixed;
+  margin-top:30px;
 }
 .side-bar>* {
   padding: 10px 20px;
@@ -33,7 +34,7 @@ a,body {
 .main {
   float: right;
   width: 80%;
-
+  margin-top:30px;
   color:#454545;
 }
 
