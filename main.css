@@ -41,10 +41,10 @@ a,body {
 .header .logo {
   border: 5px solid #eee;
   padding: 10px 20px;
-  font-size: 30px;
   display: inline-block;
   margin-bottom: 10px;
-  line-height: 1;
+  width: auto;
+  height: auto;
 }
 .article-list,.article{
   margin-right: 30%;
