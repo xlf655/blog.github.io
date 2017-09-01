@@ -1,6 +1,7 @@
 body {
   background: #454545;
   line-height: 1.7;
+  font-size: small;
 }
 a {
   text-decoration: none;
@@ -60,11 +61,11 @@ a,body {
 .article-list .item .title,
 .article .title{
   color: #454545;
-  font-size: auto;
+  font-size: 120%;
   font-weight: 700;
 }
 .article-list .item .status,
 .article .status{
-  font-size: auto;
+  font-size: 120%;
   color: #ccc;
 }
