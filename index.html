@@ -5,14 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css">
-  <!--响应式css-->
-  <link href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+  <!--响应式css 现在还用不道-->
+  <!--
+  <link href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="css/main.css">
+  <!--以下是适配iphone 6 plus-->
+  <link media="(min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)" rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" media="(max-width: 768px)" href="css/mobile.css">
   <title>赟从龙</title>
 </head>
 <body>
   <div class="container">
   <div class="side-bar">
+    <label id="menu-toggle" for="menu">菜单</label>
+
+    <input id="menu" type="checkbox">
     <div class="header">
       <a href="index.html" class="logo"><img src="hands_med.jpg" alt="hans" class="image-responsive"style="width:150px"></a>
       <div class="intro"> 关关雎鸠，在河之洲。<br>窈窕淑女，君子好逑。<br></div>
@@ -45,20 +52,10 @@
             <a  href="#"class="title">Our Story</a>
             <div class="status">发布与2017-8-28|阅读：3500|标签：#html</div>
             <div class="content">我们的故事还有很长，一起来书写吧。</div>
-            <div class="item">
-              <a  href="#"class="title">lorem</a>
-              <div class="status">发布与2017-8-28|阅读：3500|标签：#html</div>
-              <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-              <div class="item">
-                <a  href="#"class="title">lorem</a>
-                <div class="status">发布与2017-8-28|阅读：3500|标签：#html</div>
-                <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div><div class="item">
-                  <a  href="#"class="title">lorem</a>
-                  <div class="status">发布与2017-8-28|阅读：3500|标签：#html</div>
-                  <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div><div class="item">
-                    <a  href="#"class="title">lorem</a>
-                    <div class="status">发布与2017-8-28|阅读：3500|标签：#html</div>
-                    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <a  href="#"class="title">Sad Story</a>
+            <div class="status">发布与2017-9-2|阅读：1|标签：#html #情感</div>
+            <div class="content">今天真的是糟糕透了，也不知道这几天是怎么了，一直跟老婆生气。老婆对不起，我知道错了。以后一定好好对你的。</div>
+
 
 
       </div>
