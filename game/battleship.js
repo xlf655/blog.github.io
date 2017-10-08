@@ -6,6 +6,7 @@
 
 //实现View对象 采用三个方法
 //dispalyMessage,displayHit,displayMiss.
+alert("游戏开始！")
 var view ={//定义View对象
   displayMessage:function (msg) {//实现displayMessage方法：使用DOM来获取id为messageArea的元素。将这个元素的innerHTML设置为传入的消息。
     //方法displayMessage接受一个参数msg。
@@ -43,15 +44,15 @@ var model={//定义Model对象
         var index=ship.locations.indexOf(guess);//indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
         //如果guess包含在数组locations中，就说明击中了该战舰
         if (ship.hits[index] === "hit") {
-  				view.displayMessage("Oops, you already hit that location!");
+  				view.displayMessage("你已经击中了该位置！");
   				return true;
   			} else if (index >= 0) {
   				ship.hits[index] = "hit";
   				view.displayHit(guess);
-  				view.displayMessage("HIT!");
+  				view.displayMessage("命中！");
 
   				if (this.isSunk(ship)) {
-  					view.displayMessage("You sank my battleship!");
+  					view.displayMessage("你击沉了我的一艘战舰！");
   					this.shipsSunk++;
   				}
   				return true;
@@ -132,7 +133,9 @@ var controller={   //定义Controller对象
       this.guesses++;//如果猜测有效，guesses+1
       var hit=model.fire(location);//以字符串形式将行号和列号传递给model方法中的fire
       if (hit&&model.shipsSunk===model.numShips) {//如果击中战舰，且击沉的战舰数与有戏包含的战舰数相等，就向晚间显示一条消息，击沉了全部的战舰。
-        view.displayMessage("你通过"+this.guesses+" 次,击沉了我的全部战舰。")//指出通过多少次的猜测击沉了全部的战舰。
+        view.displayMessage("游戏结束。你通过"+this.guesses+" 次尝试,击沉了我的全部战舰。命中率为"+(9/this.guesses)*100+"%");//指出通过多少次的猜测击沉了全部的战舰。
+        alert("游戏结束！");
+        
       }
     }
   }
@@ -159,6 +162,7 @@ function parseGuess(guess) {//将猜测的位置给形参guess
 }
 
 function handleFireButton() {
+  //
   var guessInput=document.getElementById("guessInput");
   var guess=guessInput.value.toUpperCase();
   controller.processGuess(guess);//将玩家的猜测交给控制器
