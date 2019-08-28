@@ -15,7 +15,7 @@ function init() {
 // using IE or Opera, or a really old version of Safari, Firefox or
 // Chrome, you can use this instead of Level 2 (below).
 //
-/*function getSales_XHRv1() {
+function getSales_XHRv1() {
 	// change the URL to match the location where you
 	// put the sales.json file
 	var url = "http://xlf655.github.io/blog.github.io/gumball/sales.json";
@@ -27,14 +27,14 @@ function init() {
 		}
 	};
 	request.send(null);
-}*/
+}
 
 //
 // With XMLHttpRequest Level 2 (implemented in new versions of Firefox, Safari
 // and Chrome) you can check progress and check for the "load" event with the
 // onload event handler instead of checking the onreadystatechange
 //
-function getSales() {
+/*function getSales() {
 	// change the URL to match the location where you
 	// put the sales.json file
 	var url = "http://xlf655.github.io/blog.github.io/gumball/sales.json";
@@ -58,4 +58,4 @@ function updateSales(responseText) {
 		div.innerHTML = sale.name + " sold " + sale.sales + " gumballs";
 		salesDiv.appendChild(div);
 	}
-}
+}*/
