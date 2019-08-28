@@ -15,7 +15,7 @@ function init() {
 // using IE or Opera, or a really old version of Safari, Firefox or
 // Chrome, you can use this instead of Level 2 (below).
 //
-function getSales_XHRv1() {
+/*function getSales_XHRv1() {
 	// change the URL to match the location where you
 	// put the sales.json file
 	var url = "http://xlf655.github.io/blog.github.io/gumball/sales.json";
@@ -27,7 +27,7 @@ function getSales_XHRv1() {
 		}
 	};
 	request.send(null);
-}
+}*/
 
 //
 // With XMLHttpRequest Level 2 (implemented in new versions of Firefox, Safari
