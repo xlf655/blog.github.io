@@ -135,7 +135,7 @@ var controller={   //定义Controller对象
       if (hit&&model.shipsSunk===model.numShips) {//如果击中战舰，且击沉的战舰数与有戏包含的战舰数相等，就向晚间显示一条消息，击沉了全部的战舰。
         view.displayMessage("游戏结束。你通过"+this.guesses+" 次尝试,击沉了我的全部战舰。命中率为"+(9/this.guesses)*100+"%");//指出通过多少次的猜测击沉了全部的战舰。
         alert("游戏结束！");
-        
+
       }
     }
   }

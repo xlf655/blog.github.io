@@ -10,7 +10,7 @@ function displayLocation(position){
   var latitude=position.coords.latitude;
   var longitude=position.coords.longitude;
   var div=document.getElementById("location");
-  div.innerHTML="You are at latitude: "+latitude+", Longitude: "+longitude;
+  div.innerHTML="目前地点经纬度：经度 "+longitude+"纬度："+latitude;
 }
 function displayError(error) {
   var errorTypes={
