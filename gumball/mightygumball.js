@@ -37,7 +37,7 @@ function getSales_XHRv1() {
 function getSales() {
 	// change the URL to match the location where you
 	// put the sales.json file
-	var url = "http://localhost/gumball/sales.json";
+	var url = "http://xlf655.github.io/blog.github.io/gumball/sales.json";
 	var request = new XMLHttpRequest();
 	request.open("GET", url);
 	request.onload = function() {
