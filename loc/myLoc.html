@@ -5,15 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我在哪里？</title>
+  <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css">
   <style>
         html,
         body,
         #container {
           width: 100%;
-          height: 95%;
+          height: 100%;
+        }
+        .info{
+            width:26rem;
         }
     </style>
-  <script src="../js/myLoc1.js" charset="utf-8"></script>
+  <!--<script src="../js/myLoc1.js" charset="utf-8"></script>-->
   <script src="../js/myLoc2.js" charset="utf-8"></script>
 </head>
 <body>
@@ -21,6 +25,16 @@
   <div id="location">
     我马上在这里出现了。
   </div>
+  <div class="info">
+    <h4 id="status"></h4><hr>
+    <p id="result"><hr>
+      由于众多浏览器已不再支持非安全域的定位请求，为保位成功率和精度，请升级您的站点到HTTPS。
+    </p><hr>
+    <p id="distance">
+
+    </p>
+  </div>
+
 
 </body>
 </html>
