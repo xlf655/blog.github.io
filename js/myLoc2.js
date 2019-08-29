@@ -57,11 +57,29 @@ AMap.plugin('AMap.Geolocation', function() {
         }//如为IP精确定位结果则没有精度信息
         str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
         document.getElementById('result').innerHTML = str.join('<br>');
+        //计算与家的距离
+        var p1=[101.761294,36.678148]; //家的坐标
+        var p2=data.position; //当前位置坐标
+        var dis = AMap.GeometryUtil.distance(p1, p2); //计算方法
+        document.getElementById("distance").innerHTML="目前与家距离"+dis+"米远。"; //在页面中显示
+        //
+        var path = [];
+        path.push(data.position);
+        path.push(data.position);
+        path.push(data.position);
+        map.plugin("AMap.DragRoute", function() {
+            route = new AMap.DragRoute(map, path, AMap.DrivingPolicy.LEAST_FEE); //构造拖拽导航类
+            route.search(); //查询导航路径并开启拖拽导航
+        });
 
-        var p1=[101.761294,36.678148];
-        var p2=data.position;
-        var dis = AMap.GeometryUtil.distance(p1, p2);
-        document.getElementById("distance").innerHTML="目前与家距离"+dis+"米远。";
+        function addaddControl() {
+	      map.plugin(["AMap.ToolBar"], function() {
+		    map.addControl(new AMap.ToolBar());
+	      });
+	      if(location.href.indexOf('&guide=1')!==-1){
+		    map.setStatus({scrollWheel:false})
+	       }
+       }
 
     }
     //解析定位错误信息
@@ -69,6 +87,10 @@ AMap.plugin('AMap.Geolocation', function() {
         document.getElementById('status').innerHTML='定位失败'
         document.getElementById('result').innerHTML = '失败原因排查信息:'+data.message;
     }
+//
+
+
+
 
 //加载地图工具插件
 AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'],function(){
